@@ -1,0 +1,120 @@
+.wrapWhite {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  height: 97.5vh;
+	background-color: rgb(219, 222, 225);
+	border-radius: 1%;
+}
+.wrapBlack {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  height: 97.5vh;
+	width: 98vw;
+	border-radius: 1%;
+	background-color: grey;
+}
+
+.image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  height: 85vh;
+}
+img {
+	border-radius: 4%;
+	height: 70vh;
+	width: 90vw;
+	box-shadow: -0.3em -0.3em 1em red, 0.5em 0.5em 1em rgb(250, 250, 250);
+}
+
+.infoInput {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 90vw;
+
+}
+
+.info {
+
+}
+
+p {
+	font-size: 3vw;
+	font-weight: 700;
+	color: rgb(252, 254, 254);
+	text-shadow: 0.1em 0.1em 0.2em rgb(249, 0, 0);
+	-webkit-text-stroke: 0.03em black;
+	margin: 0;
+}
+
+
+.inputButtom {
+	display: flex;
+
+	height: 8vh;
+	text-align: end;
+}
+
+.radio {
+	display: none;
+}
+
+.inputButtom label {
+	position: relative;
+	cursor: pointer;
+	padding: 4vh;
+	
+}
+
+.inputButtom label:hover::before { 
+background-color: rgb(247, 7, 3);
+transition: all 1.5s;
+}
+
+label {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+.inputButtom label::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	transform: translateY(-50%);
+	width: 4vh;
+	height: 4vh;
+	border: 0.11em solid #333;
+	background-color: aliceblue;
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+
+.inputButtom label::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 18.5%;
+	transform: translateY(-50%);
+	width: 4vh;
+	height: 4vh;
+	background-color: #2ae105;
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.radio:checked + label::before {
+	border-color: #eaeaea;
+}
+
+.radio:checked + label::after {
+	opacity: 1;
+}
+
+
