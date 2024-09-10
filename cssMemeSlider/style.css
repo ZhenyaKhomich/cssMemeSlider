@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  height: 97.5vh;
+  height: 94.5vh;
 	background-color: rgb(219, 222, 225);
 	border-radius: 1%;
 }
@@ -16,17 +16,27 @@
 	background-color: grey;
 }
 
+.wrapImg {
+	display: flex;
+	width: 98%;
+	overflow: hidden;
+	
+}
+
 .image {
+	transition: all 0.3s;
 	display: flex;
 	justify-content: center;
 	align-items: center;
   height: 85vh;
+	padding: 0px 3vw 0px 3vw;
 }
+
 img {
 	border-radius: 4%;
-	height: 70vh;
+	height: 80vh;
 	width: 90vw;
-	box-shadow: -0.3em -0.3em 1em red, 0.5em 0.5em 1em rgb(250, 250, 250);
+	box-shadow: -0.3em -0.3em 0.5em red, 0.3em 0.3em 0.5em rgb(250, 250, 250);
 }
 
 .infoInput {
@@ -42,7 +52,7 @@ img {
 }
 
 p {
-	font-size: 3vw;
+	font-size: 6vh;
 	font-weight: 700;
 	color: rgb(252, 254, 254);
 	text-shadow: 0.1em 0.1em 0.2em rgb(249, 0, 0);
@@ -85,7 +95,7 @@ label {
 	content: "";
 	position: absolute;
 	top: 50%;
-	left: 15%;
+	left: 14%;
 	transform: translateY(-50%);
 	width: 4vh;
 	height: 4vh;
@@ -99,7 +109,7 @@ label {
 	content: "";
 	position: absolute;
 	top: 50%;
-	left: 18.5%;
+	left: 18%;
 	transform: translateY(-50%);
 	width: 4vh;
 	height: 4vh;
@@ -109,6 +119,10 @@ label {
 	transition: opacity 0.3s;
 }
 
+.inputButtom label:active::before{
+background-color: rgb(201, 245, 3);
+transition: 0.3s;
+}
 .radio:checked + label::before {
 	border-color: #eaeaea;
 }
