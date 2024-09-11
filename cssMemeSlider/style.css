@@ -1,3 +1,4 @@
+
 .wrapWhite {
 	display: flex;
 	justify-content: center;
@@ -6,6 +7,7 @@
 	background-color: rgb(219, 222, 225);
 	border-radius: 1%;
 }
+
 .wrapBlack {
 	display: flex;
 	flex-direction: column;
@@ -14,17 +16,20 @@
 	width: 98vw;
 	border-radius: 1%;
 	background-color: grey;
+	overflow: hidden;
 }
 
 .wrapImg {
 	display: flex;
+	flex-direction: row;
 	width: 98%;
-	overflow: hidden;
+	transition: all 1s;
 	
 }
 
+
 .image {
-	transition: all 0.3s;
+	transition: transform 0.3s;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -33,26 +38,40 @@
 }
 
 img {
+	transition: all 0s;
 	border-radius: 4%;
 	height: 80vh;
 	width: 90vw;
 	box-shadow: -0.3em -0.3em 0.5em red, 0.3em 0.3em 0.5em rgb(250, 250, 250);
 }
 
+
 .infoInput {
 	display: flex;
+	position: relative;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: end;
 	width: 90vw;
+	overflow: hidden;
+}
 
+.wrap-info {
+	display: flex;
+	position: absolute;
+	left: 0;
+	gap: 50vw;
+	transition: transform 1s;
 }
 
 .info {
-
+  display: flex;
+  gap: 100px;
+	justify-content: start;
 }
 
-p {
-	font-size: 6vh;
+.infoText {
+	font-size: 5vh;
+	width: 50vw;
 	font-weight: 700;
 	color: rgb(252, 254, 254);
 	text-shadow: 0.1em 0.1em 0.2em rgb(249, 0, 0);
@@ -60,12 +79,12 @@ p {
 	margin: 0;
 }
 
-
 .inputButtom {
 	display: flex;
-
 	height: 8vh;
 	text-align: end;
+	z-index: 2;
+	background-color: grey;
 }
 
 .radio {
@@ -131,4 +150,35 @@ transition: 0.3s;
 	opacity: 1;
 }
 
+#one:checked ~ .wrapBlack .wrapImg {
+	transform: translateX(0);
+}
+#two:checked ~ .wrapBlack .wrapImg {
+	transform: translateX(-100%);
+}
+#three:checked ~ .wrapBlack .wrapImg {
+	transform: translateX(-200%);
+}
+#four:checked ~ .wrapBlack .wrapImg {
+	transform: translateX(-300%);
+}
 
+#one:checked ~ .wrapBlack .infoInput .wrap-info {
+	transform: translateX(0);
+}
+#two:checked ~ .wrapBlack .infoInput .wrap-info {
+	transform: translateX(-28.5%);
+}
+#three:checked ~ .wrapBlack .infoInput .wrap-info {
+	transform: translateX(-57%);
+}
+#four:checked ~ .wrapBlack .infoInput .wrap-info {
+	transform: translateX(-85.6%);
+}
+
+#one:checked ~ .wrapBlack .inputButtom label[for="one"]::before,
+#two:checked ~ .wrapBlack .inputButtom label[for="two"]::before,
+#three:checked ~ .wrapBlack .inputButtom label[for="three"]::before,
+#four:checked ~ .wrapBlack .inputButtom label[for="four"]::before {
+    background-color: green;
+}
