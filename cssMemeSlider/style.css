@@ -1,9 +1,8 @@
-
 .wrapWhite {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  height: 94.5vh;
+	height: 94.5vh;
 	background-color: rgb(219, 222, 225);
 	border-radius: 1%;
 }
@@ -12,8 +11,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  height: 97.5vh;
-	width: 98vw;
+	height: 100vh;
+	width: 100vw;
 	border-radius: 1%;
 	background-color: grey;
 	overflow: hidden;
@@ -22,29 +21,28 @@
 .wrapImg {
 	display: flex;
 	flex-direction: row;
-	width: 98%;
-	transition: all 1s;
-	
+	align-items: center;
+	width: 100%;
+	height: 90%;
+	transition: transform 1s ease;
 }
 
-
 .image {
-	transition: transform 0.3s;
+	flex: 0 0 100%; 
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  height: 85vh;
-	padding: 0px 3vw 0px 3vw;
+	height: 90%; 
+	width: 100%; 
 }
 
 img {
-	transition: all 0s;
 	border-radius: 4%;
-	height: 80vh;
-	width: 90vw;
+	height: auto; 
+	width: 90%; 
+	height: 82vh; 
 	box-shadow: -0.3em -0.3em 0.5em red, 0.3em 0.3em 0.5em rgb(250, 250, 250);
 }
-
 
 .infoInput {
 	display: flex;
@@ -58,33 +56,41 @@ img {
 .wrap-info {
 	display: flex;
 	position: absolute;
-	left: 0;
-	gap: 50vw;
-	transition: transform 1s;
+	margin: 0 17vw 0 0;
+	width: 100%; 
+	transition: transform 1s ease;
+	gap: 11%;
 }
 
 .info {
-  display: flex;
-  gap: 100px;
-	justify-content: start;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%; 
 }
 
 .infoText {
-	font-size: 5vh;
-	width: 50vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4.5vw;
+	height: 7vh;
+	width: 80vw; 
 	font-weight: 700;
 	color: rgb(252, 254, 254);
 	text-shadow: 0.1em 0.1em 0.2em rgb(249, 0, 0);
 	-webkit-text-stroke: 0.03em black;
 	margin: 0;
+	text-align: center;
 }
 
 .inputButtom {
 	display: flex;
-	height: 8vh;
+	height: 9vh;
 	text-align: end;
 	z-index: 2;
 	background-color: grey;
+	margin: -2vh 0 0 0;
 }
 
 .radio {
@@ -94,13 +100,12 @@ img {
 .inputButtom label {
 	position: relative;
 	cursor: pointer;
-	padding: 4vh;
-	
+	padding: 5vh;
 }
 
 .inputButtom label:hover::before { 
-background-color: rgb(247, 7, 3);
-transition: all 1.5s;
+	background-color: rgb(247, 7, 3);
+	transition: all 1.5s;
 }
 
 label {
@@ -113,9 +118,8 @@ label {
 .inputButtom label::before {
 	content: "";
 	position: absolute;
-	top: 50%;
-	left: 14%;
-	transform: translateY(-50%);
+	margin: 1vh 0 0 0;
+	transform: translate(10%, 0%);
 	width: 4vh;
 	height: 4vh;
 	border: 0.11em solid #333;
@@ -127,9 +131,7 @@ label {
 .inputButtom label::after {
 	content: "";
 	position: absolute;
-	top: 50%;
-	left: 18%;
-	transform: translateY(-50%);
+	transform: translate(-50%, -50%);
 	width: 4vh;
 	height: 4vh;
 	background-color: #2ae105;
@@ -138,10 +140,11 @@ label {
 	transition: opacity 0.3s;
 }
 
-.inputButtom label:active::before{
-background-color: rgb(201, 245, 3);
-transition: 0.3s;
+.inputButtom label:active::before {
+	background-color: rgb(201, 245, 3);
+	transition: 0.3s;
 }
+
 .radio:checked + label::before {
 	border-color: #eaeaea;
 }
@@ -153,12 +156,15 @@ transition: 0.3s;
 #one:checked ~ .wrapBlack .wrapImg {
 	transform: translateX(0);
 }
+
 #two:checked ~ .wrapBlack .wrapImg {
 	transform: translateX(-100%);
 }
+
 #three:checked ~ .wrapBlack .wrapImg {
 	transform: translateX(-200%);
 }
+
 #four:checked ~ .wrapBlack .wrapImg {
 	transform: translateX(-300%);
 }
@@ -166,19 +172,22 @@ transition: 0.3s;
 #one:checked ~ .wrapBlack .infoInput .wrap-info {
 	transform: translateX(0);
 }
+
 #two:checked ~ .wrapBlack .infoInput .wrap-info {
-	transform: translateX(-28.5%);
+	transform: translateX(-100%);
 }
+
 #three:checked ~ .wrapBlack .infoInput .wrap-info {
-	transform: translateX(-57%);
+	transform: translateX(-201%);
 }
+
 #four:checked ~ .wrapBlack .infoInput .wrap-info {
-	transform: translateX(-85.6%);
+	transform: translateX(-300%);
 }
 
 #one:checked ~ .wrapBlack .inputButtom label[for="one"]::before,
 #two:checked ~ .wrapBlack .inputButtom label[for="two"]::before,
 #three:checked ~ .wrapBlack .inputButtom label[for="three"]::before,
 #four:checked ~ .wrapBlack .inputButtom label[for="four"]::before {
-    background-color: green;
+	background-color: green;
 }
