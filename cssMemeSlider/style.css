@@ -1,8 +1,13 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .wrapWhite {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 94.5vh;
+	height: 95vh;
 	background-color: rgb(219, 222, 225);
 	border-radius: 1%;
 }
@@ -23,7 +28,7 @@
 	flex-direction: row;
 	align-items: center;
 	width: 100%;
-	height: 90%;
+	height: 87%;
 	transition: transform 1s ease;
 }
 
@@ -40,57 +45,49 @@ img {
 	border-radius: 4%;
 	height: auto; 
 	width: 90%; 
-	height: 82vh; 
+	height: 80vh; 
 	box-shadow: -0.3em -0.3em 0.5em red, 0.3em 0.3em 0.5em rgb(250, 250, 250);
 }
 
 .infoInput {
 	display: flex;
-	position: relative;
-	flex-direction: row;
-	justify-content: end;
-	width: 90vw;
-	overflow: hidden;
+  align-items: center;
+  height: 13vh;
+  overflow: hidden;
+  width: 100%;
 }
 
 .wrap-info {
-	display: flex;
-	position: absolute;
-	margin: 0 17vw 0 0;
-	width: 100%; 
-	transition: transform 1s ease;
-	gap: 11%;
+display: flex;
+justify-content: start;
+width: 100%;
+transition: transform 1s ease;
 }
 
 .info {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%; 
-}
-
-.infoText {
-	display: flex;
-	justify-content: center;
+	justify-content: start;
 	align-items: center;
 	font-size: 4.5vw;
-	height: 7vh;
-	width: 80vw; 
+	height: 6vh;
+	min-width: 100%; 
 	font-weight: 700;
 	color: rgb(252, 254, 254);
 	text-shadow: 0.1em 0.1em 0.2em rgb(249, 0, 0);
 	-webkit-text-stroke: 0.03em black;
-	margin: 0;
-	text-align: center;
+	margin: 0 0 0 5%;
 }
 
 .inputButtom {
 	display: flex;
-	height: 9vh;
+  text-align: center;
+	height:30vh;
 	text-align: end;
 	z-index: 2;
-	background-color: grey;
-	margin: -2vh 0 0 0;
+  width: 300px;
+	background-color: gray;
+	margin: -1.5vh 0 0 -45vh;
+  padding: 0 9vw 0 3vh;
 }
 
 .radio {
@@ -98,14 +95,15 @@ img {
 }
 
 .inputButtom label {
-	position: relative;
 	cursor: pointer;
-	padding: 5vh;
+	padding: 2.8vh 2vh 2.8vh 0;
+  margin: 0 0 0 -2vh;
 }
 
 .inputButtom label:hover::before { 
 	background-color: rgb(247, 7, 3);
 	transition: all 1.5s;
+	padding: 0;
 }
 
 label {
@@ -113,31 +111,22 @@ label {
 	justify-content: center;
 	text-align: center;
 	align-items: center;
+	padding: 0;
 }
 
 .inputButtom label::before {
 	content: "";
-	position: absolute;
-	margin: 1vh 0 0 0;
-	transform: translate(10%, 0%);
+	margin: 0 0 0 0;
+	transform: translate(10%, 20%);
 	width: 4vh;
 	height: 4vh;
 	border: 0.11em solid #333;
 	background-color: aliceblue;
 	border-radius: 50%;
 	transition: all 0.3s;
-}
-
-.inputButtom label::after {
-	content: "";
-	position: absolute;
-	transform: translate(-50%, -50%);
-	width: 4vh;
-	height: 4vh;
-	background-color: #2ae105;
-	border-radius: 50%;
-	opacity: 0;
-	transition: opacity 0.3s;
+	padding: 0;
+  gap: 200px;
+  margin: 0 2vh 0 2vh;
 }
 
 .inputButtom label:active::before {
@@ -174,15 +163,15 @@ label {
 }
 
 #two:checked ~ .wrapBlack .infoInput .wrap-info {
-	transform: translateX(-100%);
+	transform: translateX(-105%);
 }
 
 #three:checked ~ .wrapBlack .infoInput .wrap-info {
-	transform: translateX(-201%);
+	transform: translateX(-210%);
 }
 
 #four:checked ~ .wrapBlack .infoInput .wrap-info {
-	transform: translateX(-300%);
+	transform: translateX(-315%);
 }
 
 #one:checked ~ .wrapBlack .inputButtom label[for="one"]::before,
@@ -190,4 +179,146 @@ label {
 #three:checked ~ .wrapBlack .inputButtom label[for="three"]::before,
 #four:checked ~ .wrapBlack .inputButtom label[for="four"]::before {
 	background-color: green;
+}
+
+@media(max-width:1920px) {
+  .inputButtom {
+    transform: translateX(1.5vw);
+    transition: all 1s;
+  }
+}
+
+@media(min-width:1600px) {
+ .info {
+  font-size: 6vh;
+ }
+}
+
+@media(max-width:1599px) {
+  .info {
+    font-size: 4.5vw;
+  }
+ }
+
+@media(max-width:1300px) {
+  .inputButtom {
+    transform: translateX(1.5vw);
+  }
+}
+
+@media(max-width:1200px) {
+  .info {
+    font-size: 4.5vw;
+  }
+  
+  .inputButtom {
+    transform: translateX(2vw);
+  }
+}
+
+@media(max-width:1100px) {
+  .inputButtom {
+    transform: translateX(2.7vw);
+  }
+}
+
+@media(max-width:1000px) {
+  .inputButtom label::before {
+    width: 4vh;
+    height: 4vh;
+  }
+
+  .inputButtom {
+    transform: translateX(3.5vw);
+  }
+
+  .inputButtom {
+    height: 9vh;
+  }
+  .info {
+    height: 100%;
+  }
+}
+
+@media(max-width:900px) {
+  .inputButtom {
+    transform: translateX(4vw);
+  }
+}
+
+@media(max-width:800px) {
+  .wrapImg {
+    height: 68vw;
+  }
+
+  .inputButtom {
+    transform: translateX(5vw);
+  }
+ 
+  .image {
+    height: 62vw; 
+  }
+  
+  img {
+    height: 62vw; 
+  }
+}
+
+@media(max-width:700px) {
+  
+  .infoInput {
+    flex-direction: column;
+    height: 20vh;
+  }
+
+  .inputButtom {
+    margin: 2vh 0vw 2vh 16vw;
+    order: 1;
+  }
+  .wrap-info {
+    height: 10vh;
+    order: 2;
+  }
+
+  .wrapImg {
+    height: 68vw;
+    align-items: end;
+  }
+ 
+  .image {
+    height: 62vw; 
+  }
+  
+  img {
+    height: 62vw; 
+  }
+
+  .info {
+    font-size: 5vw;
+  }
+  .inputButtom label::before {
+    width: 4vh;
+    height: 4vh;
+  }
+  .inputButtom {
+    margin: 2vh 0vw 2vh 20vw;
+    order: 1;
+  }
+}
+
+@media(max-width:500px) { 
+  .inputButtom label::before {
+    width: 3vh;
+    height: 3vh;
+  }
+  .inputButtom {
+    margin: 2vh 0vw 2vh 24vw;
+    order: 1;
+  }
+}
+
+@media(max-width:490px) {
+  .inputButtom {
+    transform: translateX(7vw);
+  }
 }
