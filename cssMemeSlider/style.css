@@ -302,7 +302,7 @@ label {
     height: 4vh;
   }
   .inputButtom {
-    margin: 2vh 0vw 2vh 20vw;
+    margin: 2vh auto 2vh auto;
     order: 1;
   }
 }
@@ -313,8 +313,8 @@ label {
     height: 3vh;
   }
   .inputButtom {
-    margin: 2vh 0vw 2vh 24vw;
     order: 1;
+    height: 2vh;
   }
 }
 
