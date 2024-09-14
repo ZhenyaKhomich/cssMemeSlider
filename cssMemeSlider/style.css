@@ -190,8 +190,9 @@ label {
  .info {
   font-size: 7vh;
  }
+
  .inputButtom {
-  transform: translateX(8vw);
+  transform: translateX(6vw);
 }
 }
 
@@ -203,23 +204,24 @@ label {
 
 @media(max-width:1300px) {
   .inputButtom {
-    transform: translateX(1.5vw);
+    transform: translateX(4vw);
   }
 }
 
 @media(max-width:1200px) {
+  
   .info {
     font-size: 4.5vw;
   }
   
   .inputButtom {
-    transform: translateX(2vw);
+    transform: translateX(5vw);
   }
 }
 
 @media(max-width:1100px) {
   .inputButtom {
-    transform: translateX(2.7vw);
+    transform: translateX(6vw);
   }
 }
 
@@ -230,7 +232,7 @@ label {
   }
 
   .inputButtom {
-    transform: translateX(3.5vw);
+    transform: translateX(7vw);
   }
 
   .inputButtom {
@@ -243,7 +245,7 @@ label {
 
 @media(max-width:900px) {
   .inputButtom {
-    transform: translateX(4vw);
+    transform: translateX(8vw);
   }
 }
 
@@ -253,7 +255,7 @@ label {
   }
 
   .inputButtom {
-    transform: translateX(5vw);
+    transform: translateX(9vw);
   }
  
   .image {
