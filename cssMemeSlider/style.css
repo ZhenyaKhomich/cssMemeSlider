@@ -181,7 +181,7 @@ label {
 
 @media(max-width:1920px) {
   .inputButtom {
-    transform: translateX(1.5vw);
+    transform: translateX(3vw);
     transition: all 0.2s;
   }
 }
@@ -306,6 +306,7 @@ label {
   .inputButtom {
     margin: 2vh auto 2vh auto;
     order: 1;
+    height: 3vh;
   }
 }
 
