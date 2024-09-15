@@ -175,7 +175,7 @@ input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg
   }
   .inputButtom {
     transform: translateX(0vw);
-    margin: 0 0 0 -39vh;
+    margin: 0 0 0 -37vh;
     transition: all 0.2s;
   }
  }
@@ -183,6 +183,8 @@ input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg
 @media(max-width:1300px) {
   .inputButtom {
     transform: translateX(0vw);
+    margin: 0 0 0 -36vh;
+    transition: all 0.2s;
   }
 }
 
@@ -200,7 +202,7 @@ input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg
 @media(max-width:1100px) {
   .inputButtom {
     transform: translateX(0vw);
-    margin: 0 0 0 -37vh;
+    margin: 0 0 0 -35vh;
     transition: all 0.2s;
   }
   }
@@ -220,7 +222,7 @@ input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg
 @media(max-width:900px) {
   .inputButtom {
     transform: translateX(0vw);
-    margin: 0 0 0 -36vh;
+    margin: 0 0 0 -34vh;
     transition: all 0.2s;
   }
 }
@@ -232,7 +234,7 @@ input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg
 
   .inputButtom {
     transform: translateX(0vw);
-    margin: 0 0 0 -35vh;
+    margin: 0 0 0 -33vh;
     transition: all 0.2s;
   }
  
