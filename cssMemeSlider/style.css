@@ -1,7 +1,3 @@
-/* .container {
-  max-width: 1440px;
-  margin: 0 auto;
-} */
 
 .wrapWhite {
 	display: flex;
@@ -80,12 +76,10 @@ transition: transform 1s ease;
 
 .inputButtom {
 	display: flex;
-  text-align: center;
-	height:30vh;
-	text-align: end;
+	height:12vh;
 	z-index: 2;
 	background-color: gray;
-	margin: -1.5vh 0 0 -45vh;
+	margin: 0 0 0 -49vh;
   padding: 0 9vw 0 3vh;
 }
 
@@ -95,13 +89,13 @@ transition: transform 1s ease;
 
 .inputButtom label {
 	cursor: pointer;
-	padding: 2.8vh 2vh 2.8vh 0;
-  margin: 0 0 0 -2vh;
+	/* padding: 2.8vh 2vh 2.8vh 0; */
+  /* margin: 0 0 0 -2vh; */
 }
 
-.inputButtom label:hover::before { 
-	background-color: rgb(247, 7, 3);
-	transition: all 1.5s;
+label:hover svg { 
+	fill:rgb(251, 255, 0);
+	transition: all 1s;
 	padding: 0;
 }
 
@@ -109,35 +103,21 @@ label {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	align-items: center;
-	padding: 0;
+  align-items: center;
+	padding: 4.5vh 2vh 2vh 2vh;
+  width: 4vh;
+  height: 4vh;
 }
 
-.inputButtom label::before {
-	content: "";
-	margin: 0 0 0 0;
-	transform: translate(10%, 20%);
-	width: 4vh;
-	height: 4vh;
-	border: 0.11em solid #333;
-	background-color: aliceblue;
-	border-radius: 50%;
-	transition: all 0.3s;
-	padding: 0;
-  margin: 0 2vh 0 2vh;
+.inputButtom label:active svg{
+  fill: rgb(247, 247, 250);
+	transition: 0.2s;
 }
-
-.inputButtom label:active::before {
-	background-color: rgb(201, 245, 3);
-	transition: 0.3s;
-}
-
-.radio:checked + label::before {
-	border-color: #eaeaea;
-}
-
-.radio:checked + label::after {
-	opacity: 1;
+input[type="radio"]#one:checked ~ .wrapBlack .inputButtom label[for="one"] svg,
+input[type="radio"]#two:checked ~ .wrapBlack .inputButtom label[for="two"] svg,
+input[type="radio"]#three:checked ~ .wrapBlack .inputButtom label[for="three"] svg,
+input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg {
+    fill: rgb(132, 235, 16); 
 }
 
 #one:checked ~ .wrapBlack .wrapImg {
@@ -172,12 +152,6 @@ label {
 	transform: translateX(-315%);
 }
 
-#one:checked ~ .wrapBlack .inputButtom label[for="one"]::before,
-#two:checked ~ .wrapBlack .inputButtom label[for="two"]::before,
-#three:checked ~ .wrapBlack .inputButtom label[for="three"]::before,
-#four:checked ~ .wrapBlack .inputButtom label[for="four"]::before {
-	background-color: green;
-}
 
 @media(max-width:1920px) {
   .inputButtom {
@@ -226,18 +200,11 @@ label {
 }
 
 @media(max-width:1000px) {
-  .inputButtom label::before {
-    width: 4vh;
-    height: 4vh;
-  }
 
   .inputButtom {
     transform: translateX(7vw);
   }
 
-  .inputButtom {
-    height: 9vh;
-  }
   .info {
     height: 100%;
   }
@@ -278,6 +245,9 @@ label {
     margin: 2vh 0vw 2vh 16vw;
     order: 1;
   }
+  label {
+      padding: 2vh 2vh 3vh 2vh;
+  }
   .wrap-info {
     height: 10vh;
     order: 2;
@@ -299,10 +269,7 @@ label {
   .info {
     font-size: 5vw;
   }
-  .inputButtom label::before {
-    width: 4vh;
-    height: 4vh;
-  }
+ 
   .inputButtom {
     margin: 2vh auto 2vh auto;
     order: 1;
@@ -311,7 +278,7 @@ label {
 }
 
 @media(max-width:500px) { 
-  .inputButtom label::before {
+  .inputButtom label svg {
     width: 3vh;
     height: 3vh;
   }
