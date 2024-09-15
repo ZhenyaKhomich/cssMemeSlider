@@ -79,8 +79,8 @@ transition: transform 1s ease;
 	height:12vh;
 	z-index: 2;
 	background-color: gray;
-	margin: 0 0 0 -53vh;
-  padding: 0 9vw 0 6vh;
+	margin: 0 0 0 -36vh;
+  padding: 0 0 0 0;
 }
 
 .radio {
@@ -151,20 +151,21 @@ input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg
 }
 
 
-@media(max-width:1920px) {
+@media(min-width:1920px) {
   .inputButtom {
-    transform: translateX(5vw);
+    transform: translateX(0vw);
+    margin: 0 0 0 -38vh;
     transition: all 0.2s;
   }
 }
 
 @media(min-width:1600px) {
  .info {
-  font-size: 7vh;
+  font-size: 6.9vh;
  }
 
  .inputButtom {
-  transform: translateX(6vw);
+  transform: translateX(0vw);
 }
 }
 
@@ -173,14 +174,15 @@ input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg
     font-size: 4.5vw;
   }
   .inputButtom {
-    transform: translateX(2vw);
+    transform: translateX(0vw);
+    margin: 0 0 0 -39vh;
     transition: all 0.2s;
   }
  }
 
 @media(max-width:1300px) {
   .inputButtom {
-    transform: translateX(7.5vw);
+    transform: translateX(0vw);
   }
 }
 
@@ -191,20 +193,23 @@ input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg
   }
   
   .inputButtom {
-    transform: translateX(8vw);
+    transform: translateX(0vw);
   }
 }
 
 @media(max-width:1100px) {
   .inputButtom {
-    transform: translateX(9vw);
+    transform: translateX(0vw);
+    margin: 0 0 0 -37vh;
+    transition: all 0.2s;
   }
-}
+  }
+
 
 @media(max-width:1000px) {
 
   .inputButtom {
-    transform: translateX(11vw);
+    transform: translateX(0vw);
   }
 
   .info {
@@ -214,7 +219,9 @@ input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg
 
 @media(max-width:900px) {
   .inputButtom {
-    transform: translateX(13vw);
+    transform: translateX(0vw);
+    margin: 0 0 0 -36vh;
+    transition: all 0.2s;
   }
 }
 
@@ -224,7 +231,9 @@ input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg
   }
 
   .inputButtom {
-    transform: translateX(14vw);
+    transform: translateX(0vw);
+    margin: 0 0 0 -35vh;
+    transition: all 0.2s;
   }
  
   .image {
@@ -244,7 +253,7 @@ input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg
   }
 
   .inputButtom {
-    margin: 2vh 0vw 2vh -16vh;
+    margin: 2vh 0vw 2vh 0vh;
     order: 1;
   }
   label {
