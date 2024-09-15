@@ -1,0 +1,308 @@
+
+.wrapWhite {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 95vh;
+	background-color: rgb(219, 222, 225);
+	border-radius: 1%;
+}
+
+.wrapBlack {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	border-radius: 1%;
+	background-color: grey;
+	overflow: hidden;
+}
+
+.wrapImg {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	height: 87%;
+	transition: transform 1s ease;
+}
+
+.image {
+	flex: 0 0 100%; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90%; 
+	width: 100%; 
+}
+
+img {
+	border-radius: 4%;
+	height: auto; 
+	width: 90%; 
+	height: 80vh; 
+	box-shadow: -0.3em -0.3em 0.5em red, 0.3em 0.3em 0.5em rgb(250, 250, 250);
+}
+
+.infoInput {
+	display: flex;
+  align-items: center;
+  height: 13vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.wrap-info {
+display: flex;
+justify-content: start;
+width: 100%;
+transition: transform 1s ease;
+}
+
+.info {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	font-size: 4.5vw;
+	height: 6vh;
+	min-width: 100%; 
+	font-weight: 700;
+	color: rgb(252, 254, 254);
+	text-shadow: 0.1em 0.1em 0.2em rgb(249, 0, 0);
+	-webkit-text-stroke: 0.03em black;
+	margin: 0 0 0 5%;
+}
+
+.inputButtom {
+	display: flex;
+	height:12vh;
+	z-index: 2;
+	background-color: gray;
+	margin: 0 0 0 -36vh;
+  padding: 0 0 0 0;
+}
+
+.radio {
+	display: none;
+}
+
+.inputButtom label {
+	cursor: pointer;
+}
+
+label:hover svg { 
+	fill:rgb(251, 255, 0);
+	transition: all 1s;
+	padding: 0;
+}
+
+label {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+  align-items: center;
+	padding: 4.5vh 2vh 2vh 2vh;
+  width: 4vh;
+  height: 4vh;
+}
+
+.inputButtom label:active svg{
+  fill: rgb(247, 247, 250);
+	transition: 0.2s;
+}
+input[type="radio"]#one:checked ~ .wrapBlack .inputButtom label[for="one"] svg,
+input[type="radio"]#two:checked ~ .wrapBlack .inputButtom label[for="two"] svg,
+input[type="radio"]#three:checked ~ .wrapBlack .inputButtom label[for="three"] svg,
+input[type="radio"]#four:checked ~ .wrapBlack .inputButtom label[for="four"] svg {
+    fill: rgb(132, 235, 16); 
+}
+
+#one:checked ~ .wrapBlack .wrapImg {
+	transform: translateX(0);
+}
+
+#two:checked ~ .wrapBlack .wrapImg {
+	transform: translateX(-100%);
+}
+
+#three:checked ~ .wrapBlack .wrapImg {
+	transform: translateX(-200%);
+}
+
+#four:checked ~ .wrapBlack .wrapImg {
+	transform: translateX(-300%);
+}
+
+#one:checked ~ .wrapBlack .infoInput .wrap-info {
+	transform: translateX(0);
+}
+
+#two:checked ~ .wrapBlack .infoInput .wrap-info {
+	transform: translateX(-105%);
+}
+
+#three:checked ~ .wrapBlack .infoInput .wrap-info {
+	transform: translateX(-210%);
+}
+
+#four:checked ~ .wrapBlack .infoInput .wrap-info {
+	transform: translateX(-315%);
+}
+
+
+@media(min-width:1920px) {
+  .inputButtom {
+    transform: translateX(0vw);
+    margin: 0 0 0 -38vh;
+    transition: all 0.2s;
+  }
+}
+
+@media(min-width:1600px) {
+ .info {
+  font-size: 6.9vh;
+ }
+
+ .inputButtom {
+  transform: translateX(0vw);
+}
+}
+
+@media(max-width:1599px) {
+  .info {
+    font-size: 4.5vw;
+  }
+  .inputButtom {
+    transform: translateX(0vw);
+    margin: 0 0 0 -37vh;
+    transition: all 0.2s;
+  }
+ }
+
+@media(max-width:1300px) {
+  .inputButtom {
+    transform: translateX(0vw);
+    margin: 0 0 0 -36vh;
+    transition: all 0.2s;
+  }
+}
+
+@media(max-width:1200px) {
+  
+  .info {
+    font-size: 4.5vw;
+  }
+  
+  .inputButtom {
+    transform: translateX(0vw);
+  }
+}
+
+@media(max-width:1100px) {
+  .inputButtom {
+    transform: translateX(0vw);
+    margin: 0 0 0 -35vh;
+    transition: all 0.2s;
+  }
+  }
+
+
+@media(max-width:1000px) {
+
+  .inputButtom {
+    transform: translateX(0vw);
+  }
+
+  .info {
+    height: 100%;
+  }
+}
+
+@media(max-width:900px) {
+  .inputButtom {
+    transform: translateX(0vw);
+    margin: 0 0 0 -34vh;
+    transition: all 0.2s;
+  }
+}
+
+@media(max-width:800px) {
+  .wrapImg {
+    height: 68vw;
+  }
+
+  .inputButtom {
+    transform: translateX(0vw);
+    margin: 0 0 0 -33vh;
+    transition: all 0.2s;
+  }
+ 
+  .image {
+    height: 62vw; 
+  }
+  
+  img {
+    height: 62vw; 
+  }
+}
+
+@media(max-width:700px) {
+  
+  .infoInput {
+    flex-direction: column;
+    height: 20vh;
+  }
+
+  .inputButtom {
+    margin: 2vh 0vw 2vh 0vh;
+    order: 1;
+  }
+  label {
+      padding: 2vh 2vh 3vh 2vh;
+  }
+  .wrap-info {
+    height: 10vh;
+    order: 2;
+  }
+
+  .wrapImg {
+    height: 68vw;
+    align-items: end;
+  }
+ 
+  .image {
+    height: 62vw; 
+  }
+  
+  img {
+    height: 62vw; 
+  }
+
+  .info {
+    font-size: 5vw;
+  }
+ 
+  .inputButtom {
+    margin: 2vh auto 2vh auto;
+    order: 1;
+    height: 3vh;
+  }
+}
+
+@media(max-width:500px) { 
+  .inputButtom label svg {
+    width: 3vh;
+    height: 3vh;
+  }
+  .inputButtom {
+    order: 1;
+    height: 2vh;
+  }
+}
+
+@media(max-width:490px) {
+  .inputButtom {
+    transform: translateX(0vw);
+  }
+}
